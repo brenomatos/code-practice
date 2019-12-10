@@ -1,5 +1,5 @@
 # Code Practice
-Repository for various code pratices. Initially, graph algorithms. Maybe data structures later
+Repository for various code pratices.
 
 # Input
 
@@ -20,8 +20,8 @@ All programs must be compiled as follows:
 ```
 g++ -std=c++11 program.cpp
 ```
-# Algorithms
-The graph algorithms I intend to implement here are the following:
+# Graph Algorithms
+The graph algorithms I intend to implement are the following:
 * BFS
 * DFS (✔)
 * Prim
@@ -34,3 +34,12 @@ The graph algorithms I intend to implement here are the following:
 * Blossom
 * Kosajaru
 * Ford-Fulkerson
+
+# Data Structures
+The data structures I intend to implement are the following:
+* Binary Tree
+* Queue
+* Stack
+* Linked List
+* Segment Tree
+* Heap ?
