@@ -2,7 +2,15 @@
 #define INF 99999999
 using namespace std;
 
-
+void print(vector<vector<int> > matrix){
+  int v = matrix.size();
+  for (int i = 0; i < v; i++) {
+    for (int j = 0; j < v; j++) {
+      cout << matrix[i][j] << " ";
+    }
+    cout << endl;
+  }
+}
 vector<vector<int> > read_input(){
   int v,e;
   int s,d,w;
@@ -14,12 +22,7 @@ vector<vector<int> > read_input(){
     cin >> s >> d >> w;
     matrix[s-1][d-1] = w;
   }
-  for (int i = 0; i < v; i++) {
-    for (int j = 0; j < v; j++) {
-      cout << matrix[i][j] << " ";
-    }
-    cout << endl;
-  }
+
   return matrix;
 }
 
@@ -37,7 +40,6 @@ void dfs(int starting_node, vector<int> nodes_visited, vector<vector<int>> G){
     for (int i = 0; i < G.size(); i++) {
       if (G[starting_node][i]) {
         if (!nodes_visited[i]) {
-          cout << i << endl;
           s.push(i);
         }
       }
@@ -50,6 +52,7 @@ int main(int argc, char const *argv[]) {
   vector<vector<int>> G;
 
   G = read_input();
+  print(G);
   nodes = G.size();
 
   vector<int> nodes_visited(nodes,0);
