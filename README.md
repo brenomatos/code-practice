@@ -20,3 +20,17 @@ All programs must be compiled as follows:
 ```
 g++ -std=c++11 program.cpp
 ```
+# Algorithms
+The graph algorithms I intend to implement here are the following:
+* BFS
+* DFS
+* Prim
+* Kruskal
+* Floyd-Warshall (✔)
+* Dijkstra
+* Hierholzer
+* 2SAT
+* Bellman-Ford
+* Blossom
+* Kosajaru
+* Ford-Fulkerson
