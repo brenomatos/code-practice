@@ -32,7 +32,7 @@ The graph algorithms I intend to implement are the following:
 * 2SAT
 * Bellman-Ford
 * Blossom
-* Kosajaru
+* Kosaraju
 * Ford-Fulkerson
 
 # Data Structures
