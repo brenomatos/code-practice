@@ -23,7 +23,7 @@ g++ -std=c++11 program.cpp
 # Algorithms
 The graph algorithms I intend to implement here are the following:
 * BFS
-* DFS
+* DFS (✔)
 * Prim
 * Kruskal
 * Floyd-Warshall (✔)
