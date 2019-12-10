@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define INF 99999999
+
 using namespace std;
 
 void print(vector<vector<int> > matrix){
@@ -32,10 +32,8 @@ void dfs(int starting_node, vector<int> nodes_visited, vector<vector<int>> G){
 
   while (!s.empty()) {
     starting_node = s.top();
-    if (!nodes_visited[starting_node]) {
-      cout << "Node Visited: " << starting_node << endl;
-      nodes_visited[starting_node] = 1;
-    }
+    cout << "Node Visited: " << starting_node << endl;
+    nodes_visited[starting_node] = 1;
     s.pop();
     for (int i = 0; i < G.size(); i++) {
       if (G[starting_node][i]) {
