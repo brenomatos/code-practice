@@ -38,7 +38,7 @@ The graph algorithms I intend to implement are the following:
 # Data Structures
 The data structures I intend to implement are the following:
 * Binary Tree
-* Queue
+* Queue (✔)
 * Stack
 * Linked List
 * Segment Tree
