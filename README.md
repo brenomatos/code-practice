@@ -41,5 +41,5 @@ The data structures I intend to implement are the following:
 * Queue (✔)
 * Stack
 * Linked List
-* Segment Tree
+* Segment Tree (✔)
 * Heap ?

@@ -14,12 +14,14 @@ int main(int argc, char const *argv[]) {
   }
 
   st = create_segtree(n);
-  build_segtree(st, input, 0, 0, st->size+1);
-  for (int i = 0; i < st->size*4; i++) {
-    printf("%d ", st->st[i]);
+  build_segtree(st,input,0,0,st->n-1);
+  for (int i = 0; i < 4*(st->n); i++) {
+    printf("%d ",st->st[i] );
   }
-  printf("query result: %d\n",query(st, 1, 3, 0, st->size-1, 0) );
-
+  printf("\n");
+  printf("query %d\n",query(st, 0, 0, st->n-1, 1, 3) );
+  printf("query %d\n",query(st, 0, 0, st->n-1, 0, 1) );
+  printf("query %d\n",query(st, 0, 0, st->n-1, 0, 0) );
   free_segtree(st);
   free(input);
   return 0;

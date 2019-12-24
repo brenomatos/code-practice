@@ -5,16 +5,17 @@
 
 typedef struct segtree{
   int *st;
-  int size;
+  int n;
 }segtree;
 
 segtree *create_segtree(int n);
 
 void free_segtree(segtree *st);
 
-void build_segtree(segtree *st, int *values, int st_index, int l, int r);
+int build_segtree(segtree *st, int *values, int st_index, int b, int e);
+
+int query(segtree *st, int st_index, int i, int j, int b, int e);
 
 int sum(int x, int y);
 
-int query(segtree *st, int l, int r, int min, int max, int pos);
 #endif
