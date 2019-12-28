@@ -8,5 +8,6 @@ typedef struct node{
   node *l, *r;
 }node;
 
-void add_node(node *tree, int key);
+void add_node(node **tree, int key);
+bool search(node *tree, int key);
 #endif
