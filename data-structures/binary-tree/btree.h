@@ -8,12 +8,5 @@ typedef struct node{
   node *l, *r;
 }node;
 
-typedef struct btree{
-  node *head;
-  int size;
-}btree;
-
-btree * init_tree();
-
-void add_node(btree *bt, int key);
+void add_node(node *tree, int key);
 #endif

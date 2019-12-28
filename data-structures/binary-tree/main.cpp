@@ -3,9 +3,9 @@
 
 
 int main(int argc, char const *argv[]) {
-  btree *b =  init_tree();
-  printf("tam %d\n",b->size );
+  node *tree = NULL;
+  add_node(tree, 2);
   
-  free(b);
+  printf("%d\n", tree->key);
   return 0;
 }
