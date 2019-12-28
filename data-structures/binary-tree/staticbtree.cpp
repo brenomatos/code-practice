@@ -3,10 +3,10 @@
 
 using namespace std;
 
-int* init_tree(int value, int size){
+int* init_tree(int size){
   int *tree = (int *) malloc (sizeof(int) * size);
   for (int i = 0; i < size; i++) {
-    tree[i] = value;
+    tree[i] = -1;
   }
   return tree;
 }
@@ -42,8 +42,8 @@ bool search_node(int * tree, int node_key, int index){
 
 int main(int argc, char const *argv[]) {
   int size = 100000;
-  int *tree, value=-1;
-  tree = init_tree(value, size);
+  int *tree;
+  tree = init_tree(size);
 
   add_node(tree, 10, 0);
   add_node(tree, 5, 0);
