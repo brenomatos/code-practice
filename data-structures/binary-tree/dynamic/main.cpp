@@ -17,7 +17,9 @@ int main(int argc, char const *argv[]) {
   printf("%d\n", search(tree, 6));
 
 
-
-
+  in_order(tree);
+  pre_order(tree);
+  post_order(tree);
+  // free(tree);
   return 0;
 }

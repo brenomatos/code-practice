@@ -32,4 +32,30 @@ bool search(node *tree, int key){
   }
   else return false;
 }
+
+void pre_order(node *tree){
+  if (tree != NULL) {
+    printf("%d\n", tree->key);
+    in_order(tree->l);
+    in_order(tree->r);
+  }
+}
+
+
+void in_order(node *tree){
+  if (tree != NULL) {
+    in_order(tree->l);
+    printf("%d\n", tree->key);
+    in_order(tree->r);
+  }
+}
+
+void post_order(node *tree){
+  if (tree != NULL) {
+    in_order(tree->l);
+    in_order(tree->r);
+    printf("%d\n", tree->key);
+  }
+}
+
 #endif
