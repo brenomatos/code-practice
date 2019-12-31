@@ -20,6 +20,6 @@ int main(int argc, char const *argv[]) {
   in_order(tree);
   pre_order(tree);
   post_order(tree);
-  // free(tree);
+  free_btree(tree);
   return 0;
 }

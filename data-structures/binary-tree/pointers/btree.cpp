@@ -58,4 +58,11 @@ void post_order(node *tree){
   }
 }
 
+void free_btree(node *tree){
+  if(!tree) return;
+  free_btree(tree->l);
+  free_btree(tree->r);
+  free(tree);
+}
+
 #endif

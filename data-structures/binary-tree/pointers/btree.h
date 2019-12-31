@@ -13,5 +13,5 @@ bool search(node *tree, int key);
 void pre_order(node *tree);
 void in_order(node *tree);
 void post_order(node *tree);
-
+void free_btree(node *tree);
 #endif
