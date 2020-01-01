@@ -40,7 +40,7 @@ The data structures I intend to implement are the following:
 * Binary Tree - array (✔)
 * Binary Tree - pointers (✔)
 * Queue (✔)
-* Stack
+* Stack (✔)
 * Linked List
 * Segment Tree (✔)
 * Heap ?
