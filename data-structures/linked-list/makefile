@@ -9,3 +9,6 @@ clean:
 
 run:
 	./list
+
+leak:
+	valgrind --leak-check=yes ./list

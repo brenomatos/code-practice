@@ -13,5 +13,9 @@ typedef struct list{
   int size;
 }list;
 
-
+list * init_list();
+void add(list **l, int key);
+int remove(list **l, int pos);
+void print(list **l);
+void free_list(list **l);
 #endif
