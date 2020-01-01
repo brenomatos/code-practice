@@ -47,5 +47,16 @@ void print(stack **s){
     printer=printer->next;
   }
   printf("Printing over\n");
+  free(printer);
 }
+
+void free_stack(stack **s){
+  node *aux = (*s)->top;
+  while (aux!=NULL) {
+    free(aux);
+    aux = aux->next;
+  }
+  free(aux);
+}
+
 #endif
