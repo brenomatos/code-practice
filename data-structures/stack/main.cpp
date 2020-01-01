@@ -13,7 +13,8 @@ int main(int argc, char const *argv[]) {
   aux = aux->next;
   printf("%d\n", aux->key);
   aux = aux->next;
-  
+  printf("%d\n", aux->key);
+  printf("%d\n",s->size );
   free(s);
   return 0;
 }
