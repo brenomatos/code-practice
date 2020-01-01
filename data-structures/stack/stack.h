@@ -15,4 +15,6 @@ typedef struct stack{
 
 void init_stack(stack **s);
 void push(stack **s, int key);
+int pop(stack **s);
+void print(stack **s);
 #endif
