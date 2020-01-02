@@ -9,8 +9,6 @@ int main(int argc, char const *argv[]) {
   push(&s,2);
   push(&s,4);
   push(&s,5);
-  print(&s);
-  print(&s);
   node *aux = s->top;
   printf("%d\n", aux->key);
   aux = aux->next;
@@ -19,6 +17,14 @@ int main(int argc, char const *argv[]) {
   printf("%d\n", aux->key);
   k = pop(&s);
   printf("%d %d\n",k,s->size );
+  k = pop(&s);
+  printf("%d %d\n",k,s->size );
+  k = pop(&s);
+  printf("%d %d\n",k,s->size );
+  push(&s,67);
+  push(&s,37);
+
+
   k = pop(&s);
   printf("%d %d\n",k,s->size );
   k = pop(&s);

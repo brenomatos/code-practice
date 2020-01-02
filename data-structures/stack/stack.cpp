@@ -33,6 +33,9 @@ int pop(stack **s){
   (*s)->top = (*s)->top->next;
   (*s)->size--;
   key = aux->key;
+  if ((*s)->size == 0) {
+    free((*s)->top);
+  }
   free(aux);
   return key;
 }
@@ -51,12 +54,12 @@ void print(stack **s){
 }
 
 void free_stack(stack **s){
-  node *aux = (*s)->top;
-  while (aux!=NULL) {
+  node *aux;
+  while ((*s)->top!=NULL) {
+    aux = (*s)->top;
+    (*s)->top = (*s)->top->next;
     free(aux);
-    aux = aux->next;
   }
-  free(aux);
 }
 
 #endif

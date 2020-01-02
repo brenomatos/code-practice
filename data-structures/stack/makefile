@@ -9,3 +9,6 @@ clean:
 
 run:
 	./stack
+
+leak:
+	valgrind --leak-check=yes ./stack
