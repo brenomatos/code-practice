@@ -31,21 +31,26 @@ void add(list **l, int key){
 }
 
 int remove(list **l, int pos){
-  int key;
+  int key, i = 0;
   node *aux = (*l)->front;
 
-  for (int i = 0; i <= pos; i++) {
+  do { // finding the node to be removed
     key = aux->key;
     aux = aux->next;
-  }
-  aux = aux->prev;
-  if (aux->prev == NULL) {
+    i++;
+  } while(i<pos);
+
+  if (aux == (*l)->front) {
     (*l)->front = (*l)->front->next;
     (*l)->front->prev = NULL;
   }
-  else{
+  else if (aux->next!=NULL && aux->prev!=NULL) {
     aux->next->prev = aux->prev;
     aux->prev->next = aux->next;
+  }
+  if (aux == (*l)->back) {
+    (*l)->back = (*l)->back->prev;
+    (*l)->back->next = NULL;
   }
 
   (*l)->size--;

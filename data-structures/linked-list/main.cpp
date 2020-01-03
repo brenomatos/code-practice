@@ -19,6 +19,8 @@ int main(int argc, char const *argv[]) {
   print(&l);
   k = remove(&l,2);
   print(&l);
+  k = remove(&l,2);
+  print(&l);
   free_list(&l);
   free(l);
   return 0;
