@@ -62,4 +62,8 @@ void free_stack(stack **s){
   }
 }
 
+bool is_empty(stack **s){
+  return (*s)->size == 0 ? true : false;
+}
+
 #endif

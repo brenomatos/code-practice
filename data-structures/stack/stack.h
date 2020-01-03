@@ -18,4 +18,5 @@ void push(stack **s, int key);
 int pop(stack **s);
 void print(stack **s);
 void free_stack(stack **s);
+bool is_empty(stack **s);
 #endif
