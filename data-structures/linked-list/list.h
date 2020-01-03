@@ -15,7 +15,7 @@ typedef struct list{
 
 list * init_list();
 void add(list **l, int key);
-int remove(list **l, int pos);
+int remove(list **l, int pos); // 0-indexed 
 void print(list **l);
 void free_list(list **l);
 void print_reverse(list **l);

@@ -3,19 +3,22 @@
 
 
 int main(int argc, char const *argv[]) {
+  int k;
   list *l = init_list();
 
   add(&l,2);
-  // printf("%d\n",l->back->key );
   add(&l,3);
-  // printf("%d\n",l->back->key );
   add(&l,4);
-  add(&l,4);
-  add(&l,4);
-  // printf("%d\n",l->back->key );
+  add(&l,5);
+  add(&l,6);
+  add(&l,7);
+
+  k = remove(&l,0);
   print(&l);
-  printf("reverse\n" );
-  print_reverse(&l);
+  k = remove(&l,1);
+  print(&l);
+  k = remove(&l,2);
+  print(&l);
   free_list(&l);
   free(l);
   return 0;

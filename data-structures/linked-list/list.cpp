@@ -31,16 +31,37 @@ void add(list **l, int key){
 }
 
 int remove(list **l, int pos){
+  int key;
+  node *aux = (*l)->front;
+
+  for (int i = 0; i <= pos; i++) {
+    key = aux->key;
+    aux = aux->next;
+  }
+  aux = aux->prev;
+  if (aux->prev == NULL) {
+    (*l)->front = (*l)->front->next;
+    (*l)->front->prev = NULL;
+  }
+  else{
+    aux->next->prev = aux->prev;
+    aux->prev->next = aux->next;
+  }
+
   (*l)->size--;
+  free(aux);
+  return key;
 }
 
 void print(list **l){
+  printf("Start printing...\n");
   node *aux = (*l)->front;
   while (aux!=NULL) {
     printf("%d\n",aux->key );
     aux = aux->next;
   }
   free(aux);
+  printf("Done\n");
 }
 
 void print_reverse(list **l){
