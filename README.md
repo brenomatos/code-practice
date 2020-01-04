@@ -13,7 +13,8 @@ They will follow the edge list input style, such as:
 2 3 2
 ```
 The first line will disclose number of vertices v and edges e, respectively. The
-next e lines will disclose the edges of the graph.  
+next e lines will disclose the edges of the graph. For the algorithms that only
+work with undirected graphs, the input file only needs to describe the edge once.
 
 # Compiling
 All programs must be compiled as follows:
