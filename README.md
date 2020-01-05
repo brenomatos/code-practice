@@ -25,7 +25,7 @@ g++ -std=c++11 program.cpp
 The graph algorithms I intend to implement are the following:
 * BFS (✔)
 * DFS (✔)
-* Prim
+* Prim (✔)
 * Kruskal
 * Floyd-Warshall (✔)
 * Dijkstra
