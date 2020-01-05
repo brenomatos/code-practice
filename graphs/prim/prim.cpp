@@ -26,23 +26,35 @@ vector<vector<int> > read_input(){
 
   return matrix;
 }
+bool in_visited(int node, vector<int> visited){
+    for (int i = 0; i < visited.size(); i++) {
+      if (node == visited[i]) {
+        return true;
+      }
+    }
+    return false;
+}
 
-int prim(vector<vector<int>> G, int nnodes){
+int prim(vector<vector<int>> G, int nnodes, int starting_node){
   vector<int> visited;
   int cost = 0;
 
-  visited.push_back(0);
-  for (int i = 1; i < nnodes; i++) {
-      priority_queue<int, vector<int>, greater<int> > pq;
-      for (int j = 0; j < visited.size(); j++) {
-        if (G[i][visited[j]]) {
-          pq.push(G[i][visited[j]]);
+  visited.push_back(starting_node);
+  while (visited.size()!=nnodes) {
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>> > pq;
+    for (int i = 0; i < visited.size(); i++) {
+      for (int j = 0; j < nnodes; j++) {
+        if (G[visited[i]][j] && visited[i]!=j) {
+          if (!in_visited(j,visited)) {
+            pq.push(make_pair(G[visited[i]][j],j));
+          }
         }
       }
-      cost += pq.top();
-      cout << "custoh " << pq.top() << endl;
-      visited.push_back(i);
+    }
+    cost += pq.top().first;
+    visited.push_back(pq.top().second);
   }
+
   return cost;
 }
 
@@ -55,7 +67,7 @@ int main(int argc, char const *argv[]) {
   nnodes = G.size();
 
   vector<int> nodes_visited(nnodes,0);
-  min_cost = prim(G, nnodes);
+  min_cost = prim(G, nnodes, 0);
   cout << "custo minimo " << min_cost << endl;
   return 0;
 }
